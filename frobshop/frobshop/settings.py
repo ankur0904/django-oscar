@@ -98,10 +98,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'frobshop.urls'
 
+print(BASE_DIR)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'frobshop/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
